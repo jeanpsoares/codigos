@@ -29,6 +29,7 @@ def carregar_dados():
 # Criação da janela principal
 root = tk.Tk()
 root.title("Mostrar Estoque")
+root.geometry("800x600")
 
 # Criação da Treeview para exibir os dados
 tree = ttk.Treeview(root, columns=('Produto', 'Quantidade'),
