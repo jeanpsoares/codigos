@@ -14,7 +14,7 @@ def create_database():
         CREATE TABLE IF NOT EXISTS estoque (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             produto TEXT NOT NULL UNIQUE,
-            quantidade INTEGER
+            quantidade REAL
         )
     ''')
     conn.commit()

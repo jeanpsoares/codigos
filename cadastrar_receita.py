@@ -19,7 +19,7 @@ def criar_tabelas():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             id_receita INTEGER,
             produto TEXT NOT NULL,
-            quantidade INTEGER,
+            quantidade REAL,
             FOREIGN KEY (id_receita) REFERENCES receitas(id)
         )
     ''')

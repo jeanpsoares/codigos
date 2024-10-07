@@ -1,7 +1,7 @@
 import tkinter as tk
 import subprocess
 
-# Funções
+# Funções para rodar outros codigos
 
 
 def run_mostrar_ingredientes():
@@ -19,22 +19,7 @@ def run_relatorio():
 def run_mostrar_estoque():
     subprocess.run(['python', 'mostrar_estoque.py'])
 
-# Função estilo do botão ao passar o mouse
-
-
-def on_enter(event):
-    event.widget['background'] = 'white'
-    event.widget['font'] = ('Arial', 12, 'bold')
-
-# Função para restaurar o estilo original quando o mouse sair do botão
-
-
-def on_leave(event):
-    event.widget['background'] = 'gray'
-    event.widget['font'] = ('Arial', 12)
-
-
-# Função para criar botões e aplicar o efeito hover
+# Função para criar botões
 
 
 def create_button(text, command, row, column):
@@ -58,7 +43,6 @@ create_button("Estoque", run_mostrar_estoque, 0, 1)
 create_button("cadastrar novas receitas", run_cadastrar_receita, 1, 1)
 create_button("Receitas", run_mostrar_ingredientes, 2, 1)
 create_button("Relatório de Consumo", run_relatorio, 3, 1)
-create_button("Fechar", root.quit, 4, 1)  # Botão para fechar o programa
+create_button("Fechar", root.quit, 4, 1)
 
-# Loop
 root.mainloop()

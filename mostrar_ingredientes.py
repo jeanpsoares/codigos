@@ -9,11 +9,11 @@ from datetime import datetime
 def criar_tabela_consumo():
     conn = sqlite3.connect('pd.db')
     cursor = conn.cursor()
-    cursor.execute('''
+    cursor.execute('''''''''
         CREATE TABLE IF NOT EXISTS consumo_semanal (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             produto TEXT NOT NULL,
-            quantidade_usada INTEGER NOT NULL,
+            quantidade_usada REAL NOT NULL,
             data TEXT NOT NULL
         )
     ''')
