@@ -34,14 +34,6 @@ def on_leave(event):
     event.widget['font'] = ('Arial', 12)
 
 
-# Criação da Interface Gráfica
-root = tk.Tk()
-root.title("Menu de Páginas")
-root.geometry("800x600")
-root.grid_columnconfigure(0, weight=1)
-root.grid_columnconfigure(1, weight=1)
-root.grid_columnconfigure(2, weight=1)
-
 # Função para criar botões e aplicar o efeito hover
 
 
@@ -50,6 +42,15 @@ def create_button(text, command, row, column):
                     height=2, font=('Arial', 12), bg="grey", fg="white")
     btn.grid(row=row, column=column, padx=10, pady=10, sticky="nsew")
     return btn
+
+
+# Criação da Interface Gráfica
+root = tk.Tk()
+root.title("Menu de Páginas")
+root.geometry("800x600")
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(1, weight=1)
+root.grid_columnconfigure(2, weight=1)
 
 
 # Criação dos botões
